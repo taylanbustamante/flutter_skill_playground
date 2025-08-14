@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../bloc_counter/bloc_counter_screen.dart';
+import 'package:skill_playground/locator.dart';
+import 'package:skill_playground/screens/dependency_injection/dependency_injection_screen.dart';
+import 'package:skill_playground/services/app_injection_service.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,8 +21,10 @@ class HomeScreen extends StatelessWidget {
       'Dependency Injection (get_it)',
     ];
 
+    final info = sl<AppInjectionService>();
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Skill Playground')),
+      appBar: AppBar(title: Text(info.appName)),
       body: ListView.separated(
         padding: const EdgeInsets.all(16),
         itemCount: features.length,
@@ -33,7 +36,9 @@ class HomeScreen extends StatelessWidget {
               trailing: const Icon(Icons.chevron_right),
               onTap: () async => await Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => BlocCounterScreen()),
+                MaterialPageRoute(
+                  builder: (context) => DependencyInjectionScreen(),
+                ),
               ),
             ),
           );
