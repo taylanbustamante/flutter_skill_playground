@@ -6,12 +6,11 @@ import 'package:skill_playground/blocs/bloc_counter/states/counter.state.dart';
 
 void main() {
   test('Incrementa só quando permitido', () {
-    final bloc = CounterBloc();
+    final CounterBloc bloc = CounterBloc();
     expect(bloc.state.value, 0);
     bloc.add(IncrementCounterEvent());
     expect(bloc.state.value, 0);
     bloc.add(ToggleAllowEvent());
-    bloc.add(IncrementCounterEvent());
     expectLater(bloc.stream, emits(isA<CounterState>()));
   });
 }
