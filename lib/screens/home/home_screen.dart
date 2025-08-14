@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skill_playground/locator.dart';
-import 'package:skill_playground/screens/custom_painter/custom_painter_screen.dart';
+import 'package:skill_playground/screens/animation_controller/animation_controller_screen.dart';
 import 'package:skill_playground/services/app_injection_service.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -36,7 +36,9 @@ class HomeScreen extends StatelessWidget {
               trailing: const Icon(Icons.chevron_right),
               onTap: () async => await Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CustomPainterScreen()),
+                MaterialPageRoute(
+                  builder: (context) => AnimationControllerScreen(),
+                ),
               ),
             ),
           );
