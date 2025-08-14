@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../bloc_counter/bloc_counter_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -29,6 +31,10 @@ class HomeScreen extends StatelessWidget {
             child: ListTile(
               title: Text(features[index]),
               trailing: const Icon(Icons.chevron_right),
+              onTap: () async => await Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => BlocCounterScreen()),
+              ),
             ),
           );
         },
