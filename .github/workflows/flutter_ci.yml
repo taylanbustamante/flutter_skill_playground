@@ -13,5 +13,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.22.6'
+          cache: true
+          cache-key: flutter-3.22.6
       - run: flutter pub get
       - run: flutter analyze
