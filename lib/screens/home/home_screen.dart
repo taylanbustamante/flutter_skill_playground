@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skill_playground/locator.dart';
-import 'package:skill_playground/screens/animation_controller/animation_controller_screen.dart';
+import 'package:skill_playground/screens/perfomance_repaint/perfomance_repaint_screen.dart';
 import 'package:skill_playground/services/app_injection_service.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,16 +9,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> features = <String>[
-      'CustomPainter Basics',
+      'CustomPainter Basics', //ja foi
       'Navigator 2.0 / RouterDelegate',
-      'Bloc State Management',
+      'Bloc State Management', //ja foi
       'Platform Channels',
-      'Performance & Repaints',
+      'Performance & Repaints', //ja foi
       'Async Isolates',
-      'AnimationController Lifecycle',
+      'AnimationController Lifecycle', //ja foi
       'StreamBuilder Error Handling',
       'Custom Slivers',
-      'Dependency Injection (get_it)',
+      'Dependency Injection (get_it)', //ja foi
     ];
 
     final info = sl<AppInjectionService>();
@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
               onTap: () async => await Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AnimationControllerScreen(),
+                  builder: (context) => PerformanceRepaintScreen(),
                 ),
               ),
             ),
