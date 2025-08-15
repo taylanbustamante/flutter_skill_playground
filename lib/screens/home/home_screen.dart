@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skill_playground/locator.dart';
-import 'package:skill_playground/screens/perfomance_repaint/perfomance_repaint_screen.dart';
+import 'package:skill_playground/screens/custom_slivers/custom_slivers_screen.dart';
 import 'package:skill_playground/services/app_injection_service.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -36,9 +36,7 @@ class HomeScreen extends StatelessWidget {
               trailing: const Icon(Icons.chevron_right),
               onTap: () async => await Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => PerformanceRepaintScreen(),
-                ),
+                MaterialPageRoute(builder: (context) => CustomSliversScreen()),
               ),
             ),
           );
