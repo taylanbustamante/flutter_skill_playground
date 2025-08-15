@@ -9,7 +9,7 @@ class CustomPainterScreen extends StatefulWidget {
 }
 
 class _CustomPainterScreenState extends State<CustomPainterScreen> {
-  double porcentagem = 0.65;
+  double _percentage = 0.65;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class _CustomPainterScreenState extends State<CustomPainterScreen> {
           Center(
             child: CustomPaint(
               size: const Size(220, 220),
-              painter: CirclePainter(porcentagem: porcentagem),
+              painter: CirclePainter(porcentagem: _percentage),
             ),
           ),
           const SizedBox(height: 24),
@@ -30,10 +30,10 @@ class _CustomPainterScreenState extends State<CustomPainterScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Column(
               children: [
-                Text('Porcentagem: ${(porcentagem * 100).toStringAsFixed(0)}%'),
+                Text('Porcentagem: ${(_percentage * 100).toStringAsFixed(0)}%'),
                 Slider(
-                  value: porcentagem,
-                  onChanged: (value) => setState(() => porcentagem = value),
+                  value: _percentage,
+                  onChanged: (value) => setState(() => _percentage = value),
                 ),
               ],
             ),

@@ -7,7 +7,7 @@ class DependencyInjectionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final info = sl<AppInjectionService>();
+    final AppInjectionService info = sl<AppInjectionService>();
     return Scaffold(
       appBar: AppBar(title: const Text('Dependency Injection (get_it)')),
       body: Center(
