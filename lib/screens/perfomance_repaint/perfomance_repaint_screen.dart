@@ -9,7 +9,7 @@ class PerformanceRepaintScreen extends StatefulWidget {
 }
 
 class _PerformanceRepaintScreenState extends State<PerformanceRepaintScreen> {
-  final List items = List.generate(500, (i) => i);
+  final List _items = List.generate(500, (i) => i);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class _PerformanceRepaintScreenState extends State<PerformanceRepaintScreen> {
             Flexible(
               child: ListView.builder(
                 shrinkWrap: true,
-                itemCount: items.length,
+                itemCount: _items.length,
                 itemBuilder: (context, index) => RepaintBoundary(
                   child: ListTile(
                     title: Text('Item nº $index'),

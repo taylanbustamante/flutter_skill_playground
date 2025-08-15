@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skill_playground/locator.dart';
-import 'package:skill_playground/screens/custom_slivers/custom_slivers_screen.dart';
+import 'package:skill_playground/screens/isolate/isolate_screen.dart';
 import 'package:skill_playground/services/app_injection_service.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,14 +14,14 @@ class HomeScreen extends StatelessWidget {
       'Bloc State Management', //ja foi
       'Platform Channels',
       'Performance & Repaints', //ja foi
-      'Async Isolates',
+      'Async Isolates', //ja foi
       'AnimationController Lifecycle', //ja foi
       'StreamBuilder Error Handling',
-      'Custom Slivers',
+      'Custom Slivers', //ja foi
       'Dependency Injection (get_it)', //ja foi
     ];
 
-    final info = sl<AppInjectionService>();
+    final AppInjectionService info = sl<AppInjectionService>();
 
     return Scaffold(
       appBar: AppBar(title: Text(info.appName)),
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
               trailing: const Icon(Icons.chevron_right),
               onTap: () async => await Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CustomSliversScreen()),
+                MaterialPageRoute(builder: (context) => IsolateScreen()),
               ),
             ),
           );
