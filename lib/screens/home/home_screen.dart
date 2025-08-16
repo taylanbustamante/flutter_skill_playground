@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skill_playground/locator.dart';
 import 'package:skill_playground/screens/platform_channels/platform_channels_screen.dart';
-import 'package:skill_playground/screens/stream_builder/stream_builder_screen.dart';
 import 'package:skill_playground/services/app_injection_service.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       'CustomPainter Basics', //ja foi
       'Navigator 2.0 / RouterDelegate',
       'Bloc State Management', //ja foi
-      'Platform Channels',
+      'Platform Channels', //ja foi
       'Performance & Repaints', //ja foi
       'Async Isolates', //ja foi
       'AnimationController Lifecycle', //ja foi
