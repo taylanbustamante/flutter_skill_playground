@@ -19,22 +19,30 @@ flutter run
 ## 📂 Estrutura
 ```
 lib/
- ├─ main.dart              # Ponto de entrada
- ├─ locator.dart           # Setup do get_it
+ ├─ bloc/                  # Blocs
+ │   └─ bloc_counter/
+ │       ├─ events/
+ │       ├─ states/
+ │       └─ bloc_counter.bloc.dart
+ │    
  ├─ router/app_router.dart # RouterDelegate + RouteInformationParser
  ├─ screens/               # Cada tela de demonstração
- │   ├─ home/
- │   ├─ custom_painter/
- │   ├─ router20/
+ │   ├─ animation_controller/
  │   ├─ bloc_counter/
- │   ├─ platform_channels/
- │   ├─ performance/
+ │   ├─ custom_painter/
+ │   ├─ custom_slivers/
+ │   ├─ dependency_injection/
+ │   ├─ home/ 
  │   ├─ isolate/
- │   ├─ animation/
- │   ├─ stream_builder/
- │   ├─ slivers/
- │   └─ di/
- └─ services/              # Serviços (ex: AppInfoService)
+ │   ├─ performance_repaint/
+ │   ├─ platform_channels/
+ │   ├─ router_20/
+ │   └─ stream_builder/
+ │
+ ├─ services/              # Serviços (ex: AppInjectionService)
+ ├─ widgets/               # Widgets usado nas telas (ex: CirclePainterWidget)
+ ├─ locator.dart           # Setup do get_it
+ └─ main.dart              # Ponto de entrada
 ```
 
 ---
@@ -99,7 +107,6 @@ flutter test
 ## 📦 Dependências
 - [flutter_bloc](https://pub.dev/packages/flutter_bloc) → gerenciamento de estado.  
 - [get_it](https://pub.dev/packages/get_it) → injeção de dependências.
-
 ---
 
 ## 📚 Notas
