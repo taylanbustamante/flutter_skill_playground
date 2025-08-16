@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skill_playground/locator.dart';
+import 'package:skill_playground/screens/platform_channels/platform_channels_screen.dart';
 import 'package:skill_playground/screens/stream_builder/stream_builder_screen.dart';
 import 'package:skill_playground/services/app_injection_service.dart';
 
@@ -36,7 +37,9 @@ class HomeScreen extends StatelessWidget {
               trailing: const Icon(Icons.chevron_right),
               onTap: () async => await Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => StreamErrorScreen()),
+                MaterialPageRoute(
+                  builder: (context) => PlatformChannelsScreen(),
+                ),
               ),
             ),
           );
