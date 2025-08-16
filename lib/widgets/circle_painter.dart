@@ -18,7 +18,7 @@ class CirclePainter extends CustomPainter {
       ..strokeWidth = 12;
 
     Paint foreground = Paint()
-      ..color = Colors.blue
+      ..color = Colors.deepPurple
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
       ..strokeWidth = 12;
