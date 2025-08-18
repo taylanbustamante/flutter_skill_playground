@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skill_playground/locator.dart';
 import 'package:skill_playground/router/app_router.dart';
-import 'package:skill_playground/screens/home/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

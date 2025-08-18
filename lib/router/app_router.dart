@@ -109,8 +109,19 @@ class AppRouter extends RouterDelegate<AppRoutePath>
   AppRoutePath get currentConfiguration => AppRoutePath(_current);
 
   void go(AppPage page) {
+    if (_current == page) return;
     _current = page;
     notifyListeners();
+  }
+
+  @override
+  Future<bool> popRoute() async {
+    if (_current != AppPage.home) {
+      _current = AppPage.home;
+      notifyListeners();
+      return true;
+    }
+    return false;
   }
 
   @override
@@ -143,11 +154,11 @@ class AppRouter extends RouterDelegate<AppRoutePath>
         if (_current == AppPage.injection)
           const MaterialPage(child: DependencyInjectionScreen()),
       ],
-      onPopPage: (route, result) {
-        if (!route.didPop(result)) return false;
-        _current = AppPage.home;
-        notifyListeners();
-        return true;
+      onDidRemovePage: (Page<dynamic> page) {
+        if (_current != AppPage.home) {
+          _current = AppPage.home;
+          notifyListeners();
+        }
       },
     );
   }
