@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skill_playground/locator.dart';
 import 'package:skill_playground/router/app_router.dart';
-import 'package:skill_playground/screens/platform_channels/platform_channels_screen.dart';
 import 'package:skill_playground/services/app_injection_service.dart';
 
 class HomeScreen extends StatelessWidget {
